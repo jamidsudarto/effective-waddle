@@ -30,7 +30,7 @@ def mine():
     import os
 
     print(f"[Modal] Pear")
-    print(f"[Modal] Pool: {POOL_HOST}")
+    
     print(f"[Modal] Wallet: {WALLET}")
     print(f"[Modal] Worker: {WORKER}")
     print()
