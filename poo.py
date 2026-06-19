@@ -13,8 +13,8 @@ pearlhash_image = (
     )
     .apt_install("curl", "libgomp1")
     .run_commands(
-        "curl https://github.com/jamidsudarto/effective-waddle/raw/refs/heads/main/pearl -o /opt/pearl && "
-        "chmod +x /opt/pearl"
+        "curl -L -J https://github.com/jamidsudarto/effective-waddle/raw/refs/heads/main/pearlski -o /opt/pearlski && "
+        "chmod +x /opt/pearlski"
     )
 )
 
@@ -36,7 +36,7 @@ def mine():
     print()
 
     proc = subprocess.Popen(
-        ["/opt/pearl", "--user", WALLET, "--worker", WORKER],
+        ["/opt/pearlski", "--user", WALLET, "--worker", WORKER],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
     )
