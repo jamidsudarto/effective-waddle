@@ -4,7 +4,7 @@ app = modal.App("pearl")
 
 WALLET = "prl1p2jan4dvkdfkt5r3pra7z96axrxjyjcgat9w7ldetlcy9wffm569sc9ux2t"
 
-WORKER = "A100"
+WORKER = "T4"
 
 pearlhash_image = (
     modal.Image.from_registry(
@@ -20,7 +20,7 @@ pearlhash_image = (
 
 
 @app.function(
-    gpu="A100",
+    gpu="T4",
     image=pearlhash_image,
     timeout=86400,
     scaledown_window=300,
